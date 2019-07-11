@@ -164,9 +164,9 @@ var restart = document.querySelector('.restart img');
 restart.addEventListener("click",playAgain);
 function playAgain(){
     result.innerText = 10;
-    scoreVal.innerText = 0;
+    scoreVal.innerText = "00";
     counter = 10;
-    score = 0<10? "0"+score : score;
+    score = 0;
     interval = 0;
     slide2.className = slide1.className.replace('show', 'hidden');
     slide1.className = slide2.className.replace('hidden', 'show');
