@@ -6,25 +6,26 @@ var camelIcon = document.querySelector('.domestic_1');
 var result = document.querySelector('#result');
 var scoreVal = document.querySelector('#score');
 var selectorDiv = document.querySelector('.selector_div');
-
+var content = document.querySelector('.content_box');
 
 var slide1 = document.querySelector('.slide_1');
 var slide2 = document.querySelector('.slide_2');
 
-let counter = 10;
+let counter = 15;
 
 var score = 0;
 let width = 300;
-var gposX = 30;
-var cposX = 200;
-var caposX = 50;
-var oaposX = 0;
-var ggaposX = 0;
+var gposX = -100;
+var cposX = 5;
+var caposX = 200;
+var oaposX = 100;
+var ggaposX = -100;
 
 selectorDiv.addEventListener('click', checkIT);
 
 function checkIT(){
     selectorDiv.classList.add('hidden');
+    content.className = content.className.replace('hidden', 'show');
     var goatMove = setInterval(function () {
         goatIcon.style.left = gposX+"px";
         gposX+= 10;
@@ -163,9 +164,9 @@ function scoreUpdate4(){
 var restart = document.querySelector('.restart img');
 restart.addEventListener("click",playAgain);
 function playAgain(){
-    result.innerText = 10;
+    result.innerText = 15;
     scoreVal.innerText = "00";
-    counter = 10;
+    counter = 15;
     score = 0;
     interval = 0;
     slide2.className = slide1.className.replace('show', 'hidden');
@@ -174,4 +175,6 @@ function playAgain(){
 }
 
 
-
+setTimeout(function(){
+    content.innerHTML = "ধর ধর ধর!";
+},3e3);
