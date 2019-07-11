@@ -49,7 +49,6 @@ body,html{
     background-size: 100%;
     background-repeat: no-repeat;
     left: -100px;
-
 }
 
 .domestic_1{
@@ -111,6 +110,29 @@ body,html{
     width: 100%;
     text-align: center;
     top: 100px;
-    color: red;
+     color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
     font-size: 36px;
+}
+
+
+.effect_dylan{
+    animation: effect_dylan .5s ease;
+}
+
+@keyframes effect_dylan {
+  50% {
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+  99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
 }

@@ -98,29 +98,57 @@ interval = setInterval(function () {
 
 
 goatIcon.addEventListener('click',scoreUpdate);
-goatIcon2.addEventListener('click',scoreUpdate);
+goatIcon2.addEventListener('click',scoreUpdate1);
 cowIcon.addEventListener('click',scoreUpdate2);
-oxIcon.addEventListener('click',scoreUpdate2);
-camelIcon.addEventListener('click',scoreUpdate3);
-
-
+oxIcon.addEventListener('click',scoreUpdate3);
+camelIcon.addEventListener('click',scoreUpdate4);
 
 
 function scoreUpdate(){
     score +=1;
-    scoreVal.innerText = score;
+    scoreVal.innerText = score<10? "0"+score:score;
+    goatIcon.classList.add('effect_dylan');
+    setTimeout( function(){
+        goatIcon.className = goatIcon.className.replace('effect_dylan', '');
+    },505);
+}
+
+function scoreUpdate1(){
+    score +=1;
+    scoreVal.innerText = score<10? "0"+score:score;
+    goatIcon2.classList.add('effect_dylan');
+    setTimeout( function(){
+        goatIcon2.className = goatIcon2.className.replace('effect_dylan', '');
+    },505);
 }
 
 
 function scoreUpdate2(){
     score +=3;
-    scoreVal.innerText = score;
+    scoreVal.innerText = score<10? "0"+score:score;
+    cowIcon.classList.add('effect_dylan');
+    setTimeout( function(){
+        cowIcon.className = cowIcon.className.replace('effect_dylan', '');
+    },505);
+}
+
+function scoreUpdate3(){
+    score +=3;
+    scoreVal.innerText = score<10? "0"+score:score;
+    oxIcon.classList.add('effect_dylan');
+    setTimeout( function(){
+        oxIcon.className = oxIcon.className.replace('effect_dylan', '');
+    },505);
 }
 
 
-function scoreUpdate3(){
+function scoreUpdate4(){
     score +=5;
-    scoreVal.innerText = score;
+    scoreVal.innerText = score<10? "0"+score : score;
+    camelIcon.classList.add('effect_dylan');
+    setTimeout( function(){
+        camelIcon.className = camelIcon.className.replace('effect_dylan', '');
+    },505);
 }
 
 
