@@ -8,6 +8,14 @@
     position: absolute;
 }
 
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
 body,html{
     height: 250px;
     width: 300px;
@@ -19,7 +27,8 @@ body,html{
 }
 
 
-.slide_1{
+
+.slide_1,.slide_2{
     height: 250px;
     width: 300px;
     cursor: url(images/cursor.png) 2 2, pointer;
@@ -29,18 +38,12 @@ body,html{
     left: 0;
 }
 
-/*.cursor_box{*/
-    /*height: 115px;*/
-    /*width: 300px;*/
-    /*background-color: transparent;*/
-    /*!*cursor: pointer;*!*/
-   /**/
-    /*top: 100px;*/
-    /*left: 0;*/
-/*}*/
+.slide_2{
+    background-image: url(images/bg2.jpg);
+}
 
 
-.domestic_1,.domestic_2,.domestic_3{
+.domestic_1,.domestic_2,.domestic_3,.domestic_4,.domestic_5{
     height: 100px;
     width: 125px;
     background-size: 100%;
@@ -63,4 +66,51 @@ body,html{
 .domestic_3{
     background-image: url("images/goat2.png");
     top: 125px;
+    left: 200px;
+}
+
+.domestic_4{
+    background-image: url("images/Ox.png");
+    top: 125px;
+    left: 100px;
+}
+
+.domestic_5{
+    background-image: url("images/ggoat.png");
+    top: 125px;
+}
+
+
+.time_board{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: white;
+    text-align: center;
+    padding-top: 7px;
+    color: black;
+    top: 10px;
+    right: 10px;
+}
+
+
+.score_board{
+    height: 20px;
+    width: 75px;
+    padding-top: 4px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    top: 10px;
+    left: : 10px;
+}
+
+
+.total_score{
+    width: 100%;
+    text-align: center;
+    top: 100px;
+    color: red;
+    font-size: 36px;
 }
