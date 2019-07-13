@@ -7,6 +7,7 @@ var result = document.querySelector('#result');
 var scoreVal = document.querySelector('#score');
 var selectorDiv = document.querySelector('.selector_div');
 var content = document.querySelector('.content_box');
+var content2 = document.querySelector('.content_box2');
 
 var slide1 = document.querySelector('.slide_1');
 var slide2 = document.querySelector('.slide_2');
@@ -73,7 +74,7 @@ function checkIT(){
 
     interval = setInterval(function () {
         counter--;
-        if (score>= 10 && counter < 0){
+        if (score>= 50 && counter < 0){
             clearInterval(goatMove);
             clearInterval(goatMove2);
             clearInterval(cowMove);
@@ -82,9 +83,10 @@ function checkIT(){
             clearInterval(interval);
             slide1.className = slide1.className.replace('show', 'hidden');
             slide2.className = slide2.className.replace('hidden', 'show');
-            document.querySelector('.total_score').innerHTML = "Win Score: "+ score;
+            // document.querySelector('.total_score').innerHTML = "Win Score: "+ score;
+            content2.innerHTML = "Your Score: "+scoreVal.innerHTML;
         }
-        else if(score < 10 && counter < 0){
+        else if(score < 50 && counter < 0){
             clearInterval(goatMove);
             clearInterval(goatMove2);
             clearInterval(cowMove);
@@ -93,7 +95,8 @@ function checkIT(){
             clearInterval(interval);
             slide1.className = slide1.className.replace('show', 'hidden');
             slide2.className = slide2.className.replace('hidden', 'show');
-            document.querySelector('.total_score').innerHTML = "Dull Score: "+ score;
+            // document.querySelector('.total_score').innerHTML = "Lose Score: "+ score;
+            content2.innerHTML = "আবার চেষ্টা করুন!";
         }
         else{
             result.innerText = counter;
@@ -164,6 +167,10 @@ function scoreUpdate4(){
 var restart = document.querySelector('.restart img');
 restart.addEventListener("click",playAgain);
 function playAgain(){
+    content.innerHTML = "ঈদ মোবারক!";
+    setTimeout(function(){
+        content.innerHTML = "ধর ধর ধর!";
+    },4e3);
     result.innerText = 15;
     scoreVal.innerText = "00";
     counter = 15;
@@ -177,4 +184,4 @@ function playAgain(){
 
 setTimeout(function(){
     content.innerHTML = "ধর ধর ধর!";
-},3e3);
+},4e3);

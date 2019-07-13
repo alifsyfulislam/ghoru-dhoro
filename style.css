@@ -165,7 +165,7 @@ body,html{
 .restart{
     width: 300px;
     height: 40px;
-    top: 90px;
+    top: 95px;
     text-align: center;
 }
 
@@ -187,6 +187,18 @@ body,html{
     transform: scale(0.001, 0.001);
     opacity: 1;
   }
+}
+
+.content_box2{
+    height: 45px;
+    width: 110px;
+    left: 37px;
+    top: 38px;
+    background-color: transparent;
+    padding-top: 13px;
+    text-align: center;
+    animation: zoomIn 1s ease infinite;
+    font-size: 12px; 
 }
 
 
